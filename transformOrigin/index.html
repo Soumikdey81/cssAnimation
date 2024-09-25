@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        padding: 2rem;
+        display: grid;
+        justify-content: center;
+      }
+      .rotate {
+        height: max-content;
+        padding: 5rem;
+        margin: 2rem 0;
+        background-color: red;
+        border-radius: 0.5rem;
+        color: #fff;
+        font-weight: bold;
+        transition: transform 2s;
+      }
+      #top {
+        transform-origin: top;
+      }
+      #bottom {
+        transform-origin: bottom;
+      }
+      #left {
+        transform-origin: left;
+      }
+      #right {
+        transform-origin: right;
+      }
+      #top-left {
+        transform-origin: top left;
+      }
+      #top-right {
+        transform-origin: top right;
+      }
+      #bottom-left {
+        transform-origin: bottom left;
+      }
+      #bottom-right {
+        transform-origin: bottom right;
+      }
+      #deg {
+        transform-origin: 15% 30%;
+      }
+      #px {
+        transform-origin: 20px 30px;
+      }
+      .rotate:hover {
+        transform: rotate(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top" class="rotate">Top</div>
+    <div id="bottom" class="rotate">Bottom</div>
+    <div id="left" class="rotate">Left</div>
+    <div id="right" class="rotate">Right</div>
+    <div id="top-left" class="rotate">Top Left</div>
+    <div id="top-right" class="rotate">Top Right</div>
+    <div id="bottom-left" class="rotate">Bottom Left</div>
+    <div id="bottom-right" class="rotate">Bottom Right</div>
+    <div id="deg" class="rotate">Rotate by degree</div>
+    <div id="px" class="rotate">Rotate by pixel</div>
+  </body>
+</html>
