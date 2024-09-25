@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        padding: 1rem 2rem;
+        border-radius: 0.2rem;
+        background-color: red;
+        color: #fff;
+        font-weight: bold;
+        transition: background-color 1s ease 900ms, color 2s ease 700ms,
+          border-radius 3s ease 500ms;
+      }
+      button:hover {
+        background-color: yellow;
+        color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Multiple Transition Property</button>
+  </body>
+</html>
