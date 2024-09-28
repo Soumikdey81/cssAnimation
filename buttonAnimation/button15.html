@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        background-color: #111;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        color: orange;
+        width: 9rem;
+        height: 3rem;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        line-height: 3rem;
+        position: relative;
+      }
+      .button:before {
+        content: "";
+        position: absolute;
+        width: 9rem;
+        height: 4rem;
+        top: -0.4rem;
+        left: 0;
+        border-left: 0.1rem solid red;
+        border-right: 0.1rem solid yellow;
+        transition: all 0.4s;
+      }
+      .button:after {
+        content: "";
+        position: absolute;
+        width: 10rem;
+        height: 3rem;
+        top: 0;
+        left: -0.4rem;
+        border-top: 0.1rem solid red;
+        border-bottom: 0.1rem solid yellow;
+        transition: all 0.4s;
+      }
+      .button:hover:before {
+        transform: rotateY(180deg);
+      }
+      .button:hover:after {
+        transform: rotateX(180deg);
+        transition-delay: 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" class="button">Hover Me</a>
+  </body>
+</html>

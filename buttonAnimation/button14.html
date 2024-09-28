@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        background-color: #111;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        color: orange;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        padding: 1rem 2rem;
+        border: 0.1rem solid orange;
+        position: relative;
+        transition: all 0.2s;
+        overflow: hidden;
+      }
+
+      .button:before,
+      .button:after,
+      .button span:before,
+      .button span:after {
+        content: "";
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: orange;
+        transition: all 0.2s;
+        z-index: -1;
+      }
+      .button:before {
+        top: 0%;
+        left: -25%;
+      }
+      .button:hover:before {
+        top: 0%;
+        left: 0%;
+      }
+      .button:after {
+        top: -100%;
+        left: 25%;
+      }
+      .button:hover:after {
+        top: 0%;
+        left: 25%;
+      }
+      .button span:before {
+        top: 100%;
+        right: 25%;
+      }
+      .button:hover span:before {
+        top: 0%;
+        right: 25%;
+      }
+      .button span:after {
+        top: 0%;
+        right: -25%;
+      }
+      .button:hover span:after {
+        top: 0%;
+        right: 0%;
+      }
+      .button:hover {
+        color: #111;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" class="button"><span>Hover Me</span></a>
+  </body>
+</html>
